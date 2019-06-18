@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ran.fyle.bank.data.BankBranchRepository;
 import com.ran.fyle.bank.data.entity.BankBranchEntity;
@@ -17,6 +18,7 @@ import com.ran.fyle.bank.vo.BankBranch;
  *
  * Implementation of the bank operations
  */
+@Service
 public class BankServiceImpl implements BankService {
 	
 	@Autowired

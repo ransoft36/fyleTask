@@ -14,7 +14,6 @@ import com.ran.fyle.bank.vo.BankBranch;
  *
  * Bank service interface having bank related operations
  */
-@Service
 public interface BankService {
 
 	/**
