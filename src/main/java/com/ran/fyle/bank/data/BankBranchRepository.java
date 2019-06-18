@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.ran.fyle.bank.data.entity.BankBranchEntity;
+import com.ran.fyle.bank.vo.BankBranch;
 
 /**
  * @author Ran
@@ -18,6 +19,14 @@ import com.ran.fyle.bank.data.entity.BankBranchEntity;
 @Repository
 public interface BankBranchRepository extends JpaRepository<BankBranchEntity, String> {
 
+	/**
+	 * Get method to get the branch details with given IFSC code
+	 * 
+	 * @param ifsc code
+	 * @return Branch details
+	 */
+	BankBranchEntity findByIfsc(String ifsc);
+	
 	/**
 	 * Get the branches with given bank name and city
 	 * 
