@@ -5,9 +5,8 @@ package com.ran.fyle.bank.data.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.data.annotation.Id;
 
 /**
  * @author Ran
@@ -19,7 +18,6 @@ import org.springframework.data.annotation.Id;
 public class BankBranchEntity {
 
 	@Id
-	@javax.persistence.Id
 	private String 	ifsc;		// Unique IFSC of the branch. Length should be 11
 	
 	@Column(name = "bank_id")

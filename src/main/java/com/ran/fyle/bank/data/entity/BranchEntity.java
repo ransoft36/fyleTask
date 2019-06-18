@@ -5,6 +5,7 @@ package com.ran.fyle.bank.data.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -21,6 +22,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Table(name = "branches")
 public class BranchEntity {
 
+	@Id
 	private String 	ifsc;		// Unique IFSC of the branch. Length should be 11
 	private String 	branch;		// Branch name
 	private String 	address;	// Branch address

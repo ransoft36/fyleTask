@@ -4,9 +4,8 @@
 package com.ran.fyle.bank.data.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.data.annotation.Id;
 
 /**
  * @author Ran
