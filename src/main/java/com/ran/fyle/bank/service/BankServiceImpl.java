@@ -26,8 +26,8 @@ public class BankServiceImpl implements BankService {
 
 	@Override
 	public BankBranch getBranchByIfsc(String ifsc) {
-		BankBranchEntity bankBranchEntity = bankBranchRepository.findByIfsc(ifsc);
-		return getBankBranch(bankBranchEntity);
+		List<BankBranchEntity> bankBranchEntityList = bankBranchRepository.findByIfsc(ifsc);
+		return getBankBranch((bankBranchEntityList != null && !bankBranchEntityList.isEmpty()) ? bankBranchEntityList.get(0) : null);
 	}
 
 	@Override
